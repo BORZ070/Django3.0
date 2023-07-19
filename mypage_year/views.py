@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from mypage.models import Book
 
-def start_views(request):
+def year_views(request):
     books = Book.objects.all()
-    return render(request, 'index.html', {'books': books})
-
-
+    return render(request, 'index_year.html', {'books': books})
