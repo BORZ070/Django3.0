@@ -7,9 +7,9 @@ from mypage_year.views import year_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mypage.urls')),
-    path('info', include('mypage_2.urls')),
-    path('year', include('mypage_year.urls'))
+    path('', include('mypage.urls', namespace='mypage')),
+    path('info', include('mypage_2.urls', namespace='mypage_2')),
+    path('year', include('mypage_year.urls', namespace='mypage_year'))
 
 
 ]

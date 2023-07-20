@@ -6,3 +6,8 @@ def start_views(request):
     return render(request, 'index.html', {'books': books})
 
 
+def detail_views(request, pk):
+    book = Book.objects.get(id=pk)
+    return render(request, 'detail.html', {'book': book})
+
+
