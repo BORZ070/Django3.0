@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for book in books %}
+
+{{ book.year }}
+<br>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="{% url 'mypage:indexpage' %}"> Main </a> / <a href="{% url 'mypage_2:infopage' %}"> Info </a> / <a href="{% url 'mypage_year:yearpage' %}"> Year </a>
+
+<br>
+
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

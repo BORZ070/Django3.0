@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
-{% block content %}
 
-{{ book.id }} {{ book.name }} {{book.year}}
-<br>
+
+
+{% block content %}
+<body>
+
+<div class="col-md-4">
+        <div class="card">
+          <img src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" class="card-img-top" alt="Товар 1">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.name }}</h5>
+            <h5 class="card-title">{{ book.author }}</h5>
+            <p class="card-text">{{ book.year }}</p>
+            <p class="card-text">{{ book.info}}</p>
+          </div>
+        </div>
+      </div>
+
+
+</body>
 
 {% endblock %}
