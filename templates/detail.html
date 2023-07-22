@@ -7,7 +7,7 @@
 
 <div class="col-md-4">
         <div class="card">
-          <img src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" class="card-img-top" alt="Товар 1">
+          <img src="{{ book.photo.url }}" class="card-img-top" alt="Товар 1">
           <div class="card-body">
             <h5 class="card-title">{{ book.name }}</h5>
             <h5 class="card-title">{{ book.author }}</h5>
@@ -15,7 +15,35 @@
             <p class="card-text">{{ book.info}}</p>
           </div>
         </div>
+
+    {% if book.photo_2 %}
+              <div class="card">
+          <img src="{{ book.photo_2.url }}" class="card-img-top" alt="Товар 1">
+              </div>
+    {% else %}
+    {% endif %}
+
+     {% if book.photo_3 %}
+            <div class="card">
+          <img src="{{ book.photo_3.url }}" class="card-img-top" alt="Товар 1">
+     {% else %}
+    {% endif %}
+
+     {% if book.photo_4 %}
+                <div class="card">
+          <img src="{{ book.photo_4.url }}" class="card-img-top" alt="Товар 1">
+     {% else %}
+    {% endif %}
+
+            </div>
+
+        </div>
+
+
+
       </div>
+
+
 
 
 </body>

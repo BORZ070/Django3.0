@@ -26,7 +26,7 @@
         {% for book in books %}
       <div class="col-md-4">
         <div class="card">
-          <a href="{% url 'mypage:detailpage' book.id %}"><img src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" class="card-img-top" alt="Товар 1"></a>
+          <a href="{% url 'mypage:detailpage' book.id %}"><img src="{{ book.photo.url }}" class="card-img-top" alt="Товар 1"></a>
           <div class="card-body">
             <h5 class="card-title">{{ book.name }}</h5>
             <h5 class="card-title">{{ book.author }}</h5>
